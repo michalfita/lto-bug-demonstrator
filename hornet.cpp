@@ -24,3 +24,6 @@ bool hornet::set_offset(const std::chrono::minutes time_offset)
     m_time_offset = time_offset;
     return true;
 }
+
+const std::chrono::minutes hornet_interface::MinOffset;
+const std::chrono::minutes hornet_interface::MaxOffset;
