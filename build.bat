@@ -10,4 +10,4 @@ set CXXFLAGS=-specs=nosys.specs -fuse-linker-plugin -ggdb -Os -ffunction-section
 %GXX% -flto -mcpu=cortex-m7 -mthumb %CXXFLAGS% -c main.cpp -o main.o
 %GXX% -flto -mcpu=cortex-m7 -mthumb %CXXFLAGS% syscalls.o main.o -r -static -nodefaultlibs -nostartfiles -o librarytwo.o
 %AR% -r librarytwo.a librarytwo.o
-%GXX% -flto=6 -fuse-linker-plugin -mcpu=cortex-m7 -mthumb %CXXFLAGS% -save-temps -L. -Wl,-gc-sections -Wl,--start-group -lraryone -lrarytwo -Wl,--end-group -o application.elf
+%GXX% -flto=6 -fuse-linker-plugin -mcpu=cortex-m7 -mthumb %CXXFLAGS% -L. -Wl,-gc-sections -Wl,--start-group -lraryone -lrarytwo -Wl,--end-group -o application.elf
